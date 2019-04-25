@@ -150,7 +150,7 @@ def main():
     tornado.options.parse_command_line()
     app = Application()
     app.listen(options.port)
-    print("Tornado webchat run: http://0.0.0.0:{}".format(options.port))
+    logging.info(msg="Tornado webchat run: http://0.0.0.0:{}".format(options.port))
     tornado.ioloop.IOLoop.current().start()
 
 
