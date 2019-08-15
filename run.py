@@ -72,6 +72,7 @@ class ChatSocketHandler(tornado.websocket.WebSocketHandler):
 
         # 初始化用户名
         self.username = "游客%d" % self.client_id
+        self.username = "游客{}".format(self.request.remote_ip)
 
         # 添加一个 新建的websocket 连接
         ChatSocketHandler.waiters.add(self)
@@ -130,6 +131,7 @@ class ChatSocketHandler(tornado.websocket.WebSocketHandler):
         print('json_decode----', parsed)
 
         self.username = parsed["username"]
+        self.username = self.request.remote_ip
         chat = {
             "id": str(uuid.uuid4()),
             "body": parsed["body"],
