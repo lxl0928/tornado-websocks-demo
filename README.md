@@ -21,6 +21,4 @@ $ python3 run.py
 [http://0.0.0.0:9999](http://0.0.0.0:9999)
 
 # 效果图
-
-
-
+[demo](http://qiniucdn.timilong.com/WechatIMG7.png)
